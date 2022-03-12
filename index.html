@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GALERIA JS</title>
+
+    <!-- FUENTE GOOGLE FONTS : Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="contenedor">
+
+        <h1>CREAR POST</h1>
+        
+
+       <div class="form">
+            <form action="" method="POST" enctype="multipart/form-data">
+
+                <div class="g-input">
+                    <label for="#">Título</label>
+                    <input type="text" name="name" autocomplete="off">
+                </div>
+
+                <div class="g-input">
+                    <label for="#">Url Interna</label>
+                    <input type="text" name="url" autocomplete="off">
+                </div>
+
+                <div class="g-input">
+                    <label for="#">Descripción</label>
+                    <textarea name="text"></textarea>
+                </div>
+
+                <div class="content-galeria">
+                    <label for="#">Galería</label>
+
+                    <div class="view-galeria dropImagen">
+
+                        <div class="list-images visorImagenes">
+
+                            <!-- <div class="img">
+                                <img src="foto-perfil-2.jpg" alt="">
+                                <button type="button" class="delete-img fa-solid fa-times"></button>
+                            </div> -->
+                            
+
+                            <label for="inputGaleria" class="file-select">
+                                <i class="fa-solid fa-plus"></i>
+                                <input type="file" id="inputGaleria" class="file-input" accept=".png, .jpg, .jpeg" multiple>
+                            </label>
+
+                        </div>
+
+                        
+
+                    </div>
+                </div>
+
+                <div class="error-msg"></div>
+
+                <button class="btn btn-primary" type="submit">Guardar Post</button>
+
+            </form>
+       </div>
+
+    </div>
+
+     <!-- ICONS: Font Awesome -->
+    <script src="https://kit.fontawesome.com/075922b03a.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>

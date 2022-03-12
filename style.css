@@ -1,0 +1,208 @@
+:root{
+    --fondo:#F5F5F7;
+    --color-1: #0485C9;
+    --color-border: #E5E5E5;
+    --color-negro: #464645;
+    --color-text:#767676;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+    background: var(--fondo);
+}
+
+ol,ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 10px;
+    background: #fff;
+    margin: 40px auto;
+    box-shadow: 0 3px 19px rgba(0, 0, 0, .11);
+}
+
+h1{
+    font-size: 20px;
+    color: var(--color-negro);
+    margin-bottom: 20px;
+}
+
+.form{
+    position: relative;
+}
+
+.g-input{
+    display: block;
+    margin-bottom: 18px;
+}
+
+.g-input > label,
+.content-galeria > label{
+    font-size: 14px;
+    color: var(--color-text);
+    margin-bottom: 5px;
+}
+
+.g-input input,
+.g-input textarea{
+    width: 100%;
+    font-size: 15px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    padding: 12px 20px;
+    color: var(--color-text);
+}
+
+.g-input textarea{
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 150px;
+    max-height: 200px;
+}
+
+.g-input input:focus{
+    border-color: var(--color-1);
+}
+
+.content-galeria{
+    position: relative;
+    width: 100%;
+}
+
+.view-galeria{
+    padding: 12px;
+    border: 1px dotted var(--color-border);
+    border-radius: 4px;
+
+}
+
+.view-galeria.drop-hover{
+    border: 2px dotted #0585c9;
+}
+
+.list-images{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.list-images .img{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 5px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.list-images .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.list-images .img .delete-img{
+    position: absolute;
+    background:red;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    outline: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    font-size: 16px;
+    display: none;
+    text-align: center;
+}
+
+.list-images .img:hover .delete-img{
+    display: block;
+}
+
+.file-select{
+    width: 100px;
+    height: 100px;
+    border-radius: 4px;
+    background:#d9f2ff;
+    position: relative;
+    display: block;
+    margin: 5px;
+    border: 1px dotted var(--color-1);
+    cursor: pointer;
+}
+
+.file-select i{
+    font-size: 25px;
+    color: var(--color-1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    
+}
+
+.file-select .file-input{
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.btn{
+    outline: 0;
+    cursor: pointer;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-top: 20px;
+
+}
+
+.btn-primary{
+    background: var(--color-1);
+    color:#fff;
+}
+
+.error-msg{
+    margin-bottom: 10px;
+    display: none;
+    transition: all 1s ease;
+}
+
+.error-msg.active{
+    display: block;
+    background:transparent;
+    border-radius: 3px;
+    transition: all 1s ease;
+}
+
+.error-msg p.danger{
+    font-size: 13px;
+    color: #ae1b1b;
+}
+
+.error-msg p.succes{
+    font-size: 13px;
+    color: #125612;
+}
